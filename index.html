@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                background-color: white;
+            }
+            #wrapper{
+                width: 256px;
+                margin: 60px auto;
+            }
+            canvas, img { 
+                image-rendering: optimizeSpeed;             /*                     */
+                image-rendering: -moz-crisp-edges;          /* Firefox             */
+                image-rendering: -o-crisp-edges;            /* Opera               */
+                image-rendering: -webkit-optimize-contrast; /* Chrome (and Safari) */
+                image-rendering: optimize-contrast;         /* CSS3 Proposed       */
+                -ms-interpolation-mode: nearest-neighbor;   /* IE8+                */
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                background-color: black;;
+                position: relative;
+                z-index: 1;
+            }
+            canvas.fight {
+                background-image: url(/img/BG.png);
+            }
+            #typewriter{
+                background: #FFFFFF;
+                font-family: 'Nunito', sans-serif;
+                border: #99CCFF 3px solid;
+                border-radius: 20px;
+                padding: 10px;
+                /*width: 400px;
+                margin: 0 auto;
+                min-height: 44px;*/
+                min-height: 32px;
+                font-size: 11px;
+                margin: -65px 0 0 0;
+                position: relative;
+                z-index: 2;
+            }
+            .hidden{
+                display: none;
+            }
+            #selector li {
+                list-style: none;
+                text-indent: -1.5em;
+                padding-left: 1.5em;
+            }
+            #selector li.selected {
+                list-style: initial;
+            }
+            #selector {
+                background: #FFFFFF;
+                font-family: 'Nunito', sans-serif;
+                width: 360px;
+                margin: auto;
+                border: #99CCFF 3px solid;
+                border-radius: 20px;
+                padding: 10px 30px;
+                min-height: 44px;
+            }
+            #money {
+                background: #FFFFFF;
+                font-family: 'Nunito', sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <canvas id="pane" width=256 height=192></canvas>
+            <div id="typewriter" class="hidden">
+            </div>
+            <p id='money' class="hidden">Money:<span id="myMoney"></span></p>
+        </div>
+
+        
+        <div>
+            
+            <p class="hidden"> your HP: <span id="HP1"></span><br>
+                enemy's HP: <span id="HP2"></span>
+            </p>
+            <ul class="hidden" id="selector"></ul>
+            <p><span id="Process"></span>
+            </p>
+        </div>
+    </body>
+    <script src="js/typewriter.js"></script>
+    <script src="js/fight.js"></script>
+    <script src="js/main.js"></script>
+
+</html>

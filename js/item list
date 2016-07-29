@@ -1,0 +1,14 @@
+poke ball,ball,100
+great ball,ball,200
+ultra ball,ball,400
+potion,healing,50
+super potion,healing,100
+hyper potion,healing,200
+max potion,healing,400
+full restore,healing,1000
+revive,revival,800
+max revive,revival,2000
+awakening,status cures,100
+burn heal,status cures,100
+paralyze heal,status cures,100
+full heal,status cures,500
